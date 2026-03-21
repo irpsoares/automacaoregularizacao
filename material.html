@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dados de Material</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-conteudo">
+      <img src="./assets/logo-bracell.png" alt="Logo Bracell" class="logo" />
+      <div class="titulos">
+        <h1>Regularização - Material</h1>
+        <p>Preenchimento complementar dos dados de material</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="card-titulo">RESUMO DA CAPA</div>
+      <div class="card-corpo">
+        <div id="resumoCapaMaterial" class="painel-resultado">Carregando resumo...</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-titulo">DADOS DO MATERIAL</div>
+      <div class="card-corpo">
+        <div class="grid grid-4">
+          <div class="campo">
+            <label for="material">Material</label>
+            <select id="material"></select>
+          </div>
+
+          <div class="campo">
+            <label for="deposito">Depósito</label>
+            <select id="deposito"></select>
+          </div>
+
+          <div class="campo">
+            <label for="grupoCompras">Grupo de Compras</label>
+            <select id="grupoCompras"></select>
+          </div>
+
+          <div class="campo">
+            <label for="frete">Frete</label>
+            <select id="frete"></select>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="campo">
+            <label for="quantidade">Quantidade</label>
+            <input id="quantidade" type="number" min="0.01" step="0.01">
+          </div>
+
+          <div class="campo">
+            <label for="valorMaterial">Valor do Material</label>
+            <input id="valorMaterial" type="number" min="0.01" max="200" step="0.01">
+          </div>
+        </div>
+
+        <div class="botoes">
+          <button id="btnValidarMaterial" class="btn btn-primario" type="button">Validar Material</button>
+          <button id="btnSalvarMaterial" class="btn btn-secundario" type="button">Salvar</button>
+          <button id="btnVoltar" class="btn btn-neutro" type="button">Voltar</button>
+        </div>
+
+        <div class="espacador"></div>
+        <div id="resultadoMaterial" class="painel-resultado">Preencha os dados do material.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/material.js"></script>
+</body>
+</html>

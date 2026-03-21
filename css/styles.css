@@ -1,1 +1,262 @@
+:root {
+  --azul-principal: #1f5db8;
+  --azul-escuro: #17458a;
+  --verde-principal: #9cc857;
+  --verde-escuro: #6f9d36;
+  --fundo: #f4f8fb;
+  --card: #ffffff;
+  --texto: #1f2937;
+  --texto-suave: #667085;
+  --borda: #d7e2ec;
+  --aviso: #f59e0b;
+  --erro: #dc2626;
+  --sucesso: #15803d;
+  --sombra: 0 10px 30px rgba(16, 24, 40, 0.08);
+}
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #eef5fb 0%, #f8fbfd 100%);
+  color: var(--texto);
+}
+
+.topo {
+  background: linear-gradient(90deg, var(--azul-escuro), var(--azul-principal));
+  color: white;
+  padding: 18px 28px;
+  box-shadow: var(--sombra);
+}
+
+.topo-conteudo {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+  background: white;
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.titulos h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.titulos p {
+  margin: 4px 0 0;
+  opacity: 0.92;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 24px auto;
+  padding: 0 18px 40px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  box-shadow: var(--sombra);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.card-titulo {
+  background: linear-gradient(90deg, #f7fbff, #eef7ea);
+  border-bottom: 1px solid var(--borda);
+  padding: 14px 18px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--azul-escuro);
+}
+
+.card-corpo {
+  padding: 18px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--azul-escuro);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #bfd0df;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 4px rgba(31, 93, 184, 0.1);
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.leitura {
+  background: #fff9db;
+  font-weight: 700;
+}
+
+.radio-box {
+  min-height: 44px;
+  border: 1px solid #bfd0df;
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: white;
+}
+
+.radio-box label {
+  font-weight: 400;
+  color: var(--texto);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.oculto {
+  display: none;
+}
+
+.botoes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primario {
+  background: var(--azul-principal);
+  color: white;
+}
+
+.btn-secundario {
+  background: var(--verde-principal);
+  color: #17310b;
+}
+
+.btn-neutro {
+  background: #e9eef4;
+  color: var(--texto);
+}
+
+.painel-resultado {
+  border: 1px dashed #b8cbda;
+  border-radius: 14px;
+  background: #f9fcff;
+  padding: 16px;
+  min-height: 120px;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+.badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.badge-azul {
+  background: rgba(31, 93, 184, 0.12);
+  color: var(--azul-escuro);
+}
+
+.badge-verde {
+  background: rgba(156, 200, 87, 0.2);
+  color: var(--verde-escuro);
+}
+
+.rodape {
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 13px;
+  padding: 10px 0 30px;
+}
+
+@media (max-width: 1024px) {
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .topo-conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    height: 48px;
+  }
+}

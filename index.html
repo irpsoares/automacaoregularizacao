@@ -10,10 +10,13 @@
   <div id="modalPolitica" class="modal aberto">
     <div class="modal-box">
       <h2>Política de Regularização</h2>
-      <p>
+
+      <div class="alerta alerta-vermelho">
         Antes de iniciar, confirme que a solicitação atende aos critérios da política.
-        Casos fora dos critérios podem ser tratados como anomalia e direcionados para a Controladoria.
-      </p>
+        Casos fora dos critérios podem ser tratados como anomalia e direcionados para
+        Controladoria, Recursos Humanos e BU Head da área.
+        O descumprimento das diretrizes pode gerar penalização conforme o código de conduta interno.
+      </div>
 
       <div class="grid grid-2">
         <div class="campo">
@@ -23,6 +26,7 @@
             <option value="sim">Sim</option>
             <option value="nao">Não</option>
           </select>
+          <small class="dica">Se não for emergência, a aprovação deve ir direto para o Head/Diretor e o usuário deve ser comunicado explicitamente.</small>
         </div>
 
         <div class="campo">
@@ -32,6 +36,7 @@
             <option value="sim">Sim</option>
             <option value="nao">Não</option>
           </select>
+          <small class="dica">Sem nota fiscal não pode continuar, em hipótese nenhuma.</small>
         </div>
 
         <div class="campo">
@@ -80,6 +85,7 @@
         <div class="badges">
           <span class="badge badge-azul">Triagem da política</span>
           <span class="badge badge-verde">Workflow com governança</span>
+          <span class="badge badge-alerta">Valor máximo permitido: R$ 200,00</span>
         </div>
 
         <div class="grid grid-4">
@@ -130,7 +136,20 @@
 
           <div class="campo">
             <label for="valorNf">Valor Total da NF</label>
-            <input id="valorNf" type="number" min="0" step="0.01" placeholder="Informe o valor">
+            <input id="valorNf" type="number" min="0" max="200" step="0.01" placeholder="Máximo 200,00">
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="campo">
+            <label for="anexoNf">Anexar Nota Fiscal</label>
+            <input id="anexoNf" type="file" accept=".pdf,.jpg,.jpeg,.png,.xml">
+            <small class="dica">Obrigatório para continuar.</small>
+          </div>
+
+          <div class="campo">
+            <label for="observacao">Justificativa</label>
+            <textarea id="observacao" placeholder="Explique o motivo da regularização com detalhes"></textarea>
           </div>
         </div>
 
@@ -173,8 +192,8 @@
           </div>
 
           <div class="campo">
-            <label for="observacao">Justificativa</label>
-            <textarea id="observacao" placeholder="Explique o motivo da regularização"></textarea>
+            <label for="comunicadoPolitica">Comunicado ao usuário</label>
+            <textarea id="comunicadoPolitica" class="leitura" readonly></textarea>
           </div>
         </div>
 
@@ -190,7 +209,7 @@
           </div>
 
           <div class="campo">
-            <label for="diretor">Diretor</label>
+            <label for="diretor">Diretor / Head</label>
             <input id="diretor" class="leitura" type="text" readonly>
           </div>
         </div>
@@ -207,7 +226,7 @@
           </div>
 
           <div class="campo">
-            <label for="emailDiretor">E-mail Diretor</label>
+            <label for="emailDiretor">E-mail Diretor / Head</label>
             <input id="emailDiretor" class="leitura" type="text" readonly>
           </div>
         </div>

@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automação de Regularização</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-conteudo">
+      <img src="./assets/logo-bracell.png" alt="Logo Bracell" class="logo">
+      <div class="titulos">
+        <h1>Automação de Regularização</h1>
+        <p>Solicitação e validação inicial de regularização de materiais e serviços</p>
+      </div>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="card">
+      <div class="card-titulo">Capa</div>
+      <div class="card-corpo">
+        <div class="badges">
+          <span class="badge badge-azul">Base inicial do sistema</span>
+          <span class="badge badge-verde">Layout nas cores da Bracell</span>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="campo">
+            <label>Tipo de Regularização</label>
+            <div class="radio-box">
+              <label><input type="radio" name="tipoRegularizacao" value="material"> Material</label>
+              <label><input type="radio" name="tipoRegularizacao" value="servico"> Serviço</label>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="tipoDocumento">Tipo de Documento</label>
+            <select id="tipoDocumento">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="dataHora">Data/Hora</label>
+            <input id="dataHora" class="leitura" type="text" readonly>
+          </div>
+
+          <div class="campo">
+            <label for="condicaoPagamento">Condição de Pagamento</label>
+            <select id="condicaoPagamento">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="campo">
+            <label for="centro">Centro</label>
+            <select id="centro">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="centroCusto">Centro de Custo</label>
+            <select id="centroCusto">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="fornecedor">Fornecedor</label>
+            <select id="fornecedor">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="usuario">Usuário</label>
+            <select id="usuario">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="campo">
+            <label for="utilizacao">Utilização</label>
+            <select id="utilizacao">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="observacao">Observação</label>
+            <textarea id="observacao" placeholder="Digite observações importantes"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blocoMaterial" class="card oculto">
+      <div class="card-titulo">Dados de Material</div>
+      <div class="card-corpo">
+        <div class="grid grid-4">
+          <div class="campo">
+            <label for="material">Material</label>
+            <select id="material">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="deposito">Depósito</label>
+            <select id="deposito">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="grupoCompras">Grupo de Compras</label>
+            <select id="grupoCompras">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="frete">Frete</label>
+            <select id="frete">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="campo">
+            <label for="quantidade">Quantidade</label>
+            <input id="quantidade" type="number" min="0" step="0.01" placeholder="Informe a quantidade">
+          </div>
+
+          <div class="campo">
+            <label for="valorMaterial">Valor do Material</label>
+            <input id="valorMaterial" type="number" min="0" step="0.01" placeholder="Informe o valor">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blocoServico" class="card oculto">
+      <div class="card-titulo">Dados de Serviço</div>
+      <div class="card-corpo">
+        <div class="grid grid-3">
+          <div class="campo">
+            <label for="destinacaoServico">Destinação do Serviço</label>
+            <select id="destinacaoServico">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="classificacaoContabil">Classificação Contábil</label>
+            <select id="classificacaoContabil">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="tipoDistribuicao">Tipo de Distribuição Contábil</label>
+            <select id="tipoDistribuicao">
+              <option value="">Carregando...</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="campo">
+            <label for="descricaoServico">Descrição do Serviço</label>
+            <input id="descricaoServico" type="text" placeholder="Descreva o serviço">
+          </div>
+
+          <div class="campo">
+            <label for="valorServico">Valor do Serviço</label>
+            <input id="valorServico" type="number" min="0" step="0.01" placeholder="Informe o valor">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-titulo">Validação e Ações</div>
+      <div class="card-corpo">
+        <div class="botoes">
+          <button id="btnValidar" class="btn btn-primario" type="button">Validar</button>
+          <button id="btnSalvar" class="btn btn-secundario" type="button">Salvar no navegador</button>
+          <button id="btnExportar" class="btn btn-neutro" type="button">Exportar JSON</button>
+          <button id="btnLimpar" class="btn btn-neutro" type="button">Limpar</button>
+        </div>
+
+        <div style="height: 16px;"></div>
+
+        <div id="painelResultado" class="painel-resultado">
+          Preencha os campos e clique em Validar.
+        </div>
+      </div>
+    </section>
+
+    <div class="rodape">
+      Sistema inicial em GitHub Pages • Base pronta para evoluir com regras e integração futura
+    </div>
+  </main>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

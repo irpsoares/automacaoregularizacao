@@ -7,23 +7,79 @@
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
+  <div id="modalPolitica" class="modal aberto">
+    <div class="modal-box">
+      <h2>Política de Regularização</h2>
+      <p>
+        Antes de iniciar, confirme que a solicitação atende aos critérios da política.
+        Casos fora dos critérios podem ser tratados como anomalia e direcionados para a Controladoria.
+      </p>
+
+      <div class="grid grid-2">
+        <div class="campo">
+          <label for="perguntaEmergencial">É uma situação emergencial?</label>
+          <select id="perguntaEmergencial">
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="perguntaNotaFiscal">Existe nota fiscal para a solicitação?</label>
+          <select id="perguntaNotaFiscal">
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="perguntaImpedimento">Houve impedimento no fluxo normal de compra?</label>
+          <select id="perguntaImpedimento">
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="perguntaJustificativa">A justificativa será detalhada?</label>
+          <select id="perguntaJustificativa">
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="botoes">
+        <button id="btnContinuarPolitica" class="btn btn-primario" type="button">Continuar</button>
+      </div>
+
+      <div id="resultadoPolitica" class="painel-resultado painel-menor">
+        Responda as perguntas para continuar.
+      </div>
+    </div>
+  </div>
+
   <header class="topo">
     <div class="topo-conteudo">
       <img src="./assets/logo-bracell.png" alt="Logo Bracell" class="logo" />
       <div class="titulos">
         <h1>Automação de Regularização</h1>
-        <p>Solicitação, validação e governança de regularização</p>
+        <p>Cadastro inicial da solicitação com base na nota fiscal</p>
       </div>
     </div>
   </header>
 
   <main class="container">
     <section class="card">
-      <div class="card-titulo">CAPA</div>
+      <div class="card-titulo">CAPA - DADOS INICIAIS</div>
       <div class="card-corpo">
         <div class="badges">
-          <span class="badge badge-azul">Validação por base cadastrada</span>
-          <span class="badge badge-verde">Workflow de aprovação</span>
+          <span class="badge badge-azul">Triagem da política</span>
+          <span class="badge badge-verde">Workflow com governança</span>
         </div>
 
         <div class="grid grid-4">
@@ -53,6 +109,28 @@
             <select id="condicaoPagamento">
               <option value="">Carregando...</option>
             </select>
+          </div>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="campo">
+            <label for="numeroNf">Número da Nota Fiscal</label>
+            <input id="numeroNf" type="text" placeholder="Informe o número da NF">
+          </div>
+
+          <div class="campo">
+            <label for="serieNf">Série da NF</label>
+            <input id="serieNf" type="text" placeholder="Informe a série">
+          </div>
+
+          <div class="campo">
+            <label for="dataNf">Data da NF</label>
+            <input id="dataNf" type="date">
+          </div>
+
+          <div class="campo">
+            <label for="valorNf">Valor Total da NF</label>
+            <input id="valorNf" type="number" min="0" step="0.01" placeholder="Informe o valor">
           </div>
         </div>
 
@@ -95,8 +173,8 @@
           </div>
 
           <div class="campo">
-            <label for="observacao">Justificativa / Observação</label>
-            <textarea id="observacao" placeholder="Descreva o motivo da regularização"></textarea>
+            <label for="observacao">Justificativa</label>
+            <textarea id="observacao" placeholder="Explique o motivo da regularização"></textarea>
           </div>
         </div>
 
@@ -133,99 +211,7 @@
             <input id="emailDiretor" class="leitura" type="text" readonly>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section id="blocoMaterial" class="card oculto">
-      <div class="card-titulo">DADOS DE MATERIAL</div>
-      <div class="card-corpo">
-        <div class="grid grid-4">
-          <div class="campo">
-            <label for="material">Material</label>
-            <select id="material">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label for="deposito">Depósito</label>
-            <select id="deposito">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label for="grupoCompras">Grupo de Compras</label>
-            <select id="grupoCompras">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label for="frete">Frete</label>
-            <select id="frete">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="grid grid-2">
-          <div class="campo">
-            <label for="quantidade">Quantidade</label>
-            <input id="quantidade" type="number" min="0" step="0.01" placeholder="Informe a quantidade">
-          </div>
-
-          <div class="campo">
-            <label for="valorMaterial">Valor do Material</label>
-            <input id="valorMaterial" type="number" min="0" step="0.01" placeholder="Informe o valor">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="blocoServico" class="card oculto">
-      <div class="card-titulo">DADOS DE SERVIÇO</div>
-      <div class="card-corpo">
-        <div class="grid grid-3">
-          <div class="campo">
-            <label for="destinacaoServico">Destinação do Serviço</label>
-            <select id="destinacaoServico">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label for="classificacaoContabil">Classificação Contábil</label>
-            <select id="classificacaoContabil">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label for="tipoDistribuicao">Tipo de Distribuição Contábil</label>
-            <select id="tipoDistribuicao">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="grid grid-2">
-          <div class="campo">
-            <label for="descricaoServico">Descrição do Serviço</label>
-            <input id="descricaoServico" type="text" placeholder="Descreva o serviço">
-          </div>
-
-          <div class="campo">
-            <label for="valorServico">Valor do Serviço</label>
-            <input id="valorServico" type="number" min="0" step="0.01" placeholder="Informe o valor">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="card-titulo">WORKFLOW E VALIDAÇÃO</div>
-      <div class="card-corpo">
         <div class="grid grid-4">
           <div class="campo">
             <label for="statusWorkflow">Status do Workflow</label>
@@ -249,23 +235,18 @@
         </div>
 
         <div class="botoes">
-          <button id="btnValidar" class="btn btn-primario" type="button">Validar</button>
-          <button id="btnSalvar" class="btn btn-secundario" type="button">Salvar no navegador</button>
-          <button id="btnExportar" class="btn btn-neutro" type="button">Exportar JSON</button>
+          <button id="btnValidarCapa" class="btn btn-primario" type="button">Validar Capa</button>
+          <button id="btnProximaEtapa" class="btn btn-secundario" type="button">Ir para próxima etapa</button>
           <button id="btnLimpar" class="btn btn-neutro" type="button">Limpar</button>
         </div>
 
         <div class="espacador"></div>
 
         <div id="painelResultado" class="painel-resultado">
-          Preencha os campos e clique em Validar.
+          Aguarde a validação inicial da política e depois preencha os dados da capa.
         </div>
       </div>
     </section>
-
-    <footer class="rodape">
-      Sistema inicial em HTML + CSS + JS • pronto para evoluir com backend
-    </footer>
   </main>
 
   <script src="./js/app.js"></script>

@@ -8,6 +8,8 @@
   --texto: #1f2937;
   --texto-suave: #667085;
   --borda: #d7e2ec;
+  --vermelho: #b42318;
+  --amarelo: #f59e0b;
   --sombra: 0 10px 30px rgba(16, 24, 40, 0.08);
 }
 
@@ -162,10 +164,6 @@ textarea {
   gap: 8px;
 }
 
-.oculto {
-  display: none;
-}
-
 .botoes {
   display: flex;
   gap: 12px;
@@ -239,6 +237,30 @@ textarea {
   color: var(--verde-escuro);
 }
 
+.badge-alerta {
+  background: rgba(245, 158, 11, 0.18);
+  color: #8a4b00;
+}
+
+.alerta {
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.alerta-vermelho {
+  background: #fff1f0;
+  color: var(--vermelho);
+  border: 1px solid #f3c7c3;
+}
+
+.dica {
+  color: var(--texto-suave);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
 .espacador {
   height: 16px;
 }
@@ -267,7 +289,7 @@ textarea {
 
 .modal-box {
   width: 100%;
-  max-width: 860px;
+  max-width: 900px;
   background: white;
   border-radius: 18px;
   padding: 24px;

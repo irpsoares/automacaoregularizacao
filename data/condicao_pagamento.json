@@ -1,0 +1,1124 @@
+[
+  {
+    "condicao": 0,
+    "descricao_prazo": "À vista"
+  },
+  {
+    "condicao": 1,
+    "descricao_prazo": "pagável imediatam.s/deduções"
+  },
+  {
+    "condicao": 2,
+    "descricao_prazo": "14 dias 2%, 30 líquido"
+  },
+  {
+    "condicao": 3,
+    "descricao_prazo": "14 dias 3%, 20/2%, 30 líquido"
+  },
+  {
+    "condicao": 4,
+    "descricao_prazo": "A partir do fim do mês"
+  },
+  {
+    "condicao": 5,
+    "descricao_prazo": "A partir 10º dia mês seguinte"
+  },
+  {
+    "condicao": 6,
+    "descricao_prazo": "Fim do mês 4%, meados mês 2%"
+  },
+  {
+    "condicao": 7,
+    "descricao_prazo": "15º/31º dia mês seguinte 2%,.."
+  },
+  {
+    "descricao_prazo": "15º/31º dia mês seguinte 2%,.."
+  },
+  {
+    "condicao": 8,
+    "descricao_prazo": "14 dias 2%, 30/1,5%, 45 líq."
+  },
+  {
+    "descricao_prazo": "14 dias 2%, 30/1,5%, 45 líq."
+  },
+  {
+    "condicao": 9,
+    "descricao_prazo": "Pagável em 3 montantes parc."
+  },
+  {
+    "condicao": 2,
+    "descricao_prazo": "2 dias do faturamento"
+  },
+  {
+    "condicao": 3,
+    "descricao_prazo": "3 dias do faturamento"
+  },
+  {
+    "condicao": 5,
+    "descricao_prazo": "5 dias do faturamento"
+  },
+  {
+    "condicao": 6,
+    "descricao_prazo": "6 dias do faturamento"
+  },
+  {
+    "condicao": 7,
+    "descricao_prazo": "7 dias do faturamento"
+  },
+  {
+    "condicao": 8,
+    "descricao_prazo": "8 dias do faturamento"
+  },
+  {
+    "condicao": 9,
+    "descricao_prazo": "9 dias do faturamento"
+  },
+  {
+    "condicao": 18,
+    "descricao_prazo": "18 dias do faturamento"
+  },
+  {
+    "condicao": 30,
+    "descricao_prazo": "30 dias do faturamento"
+  },
+  {
+    "condicao": 140,
+    "descricao_prazo": "140 dias do faturamento"
+  },
+  {
+    "condicao": "A100",
+    "descricao_prazo": "180 dias do faturamento"
+  },
+  {
+    "condicao": "A11",
+    "descricao_prazo": "46 dias do faturamento"
+  },
+  {
+    "condicao": "A12",
+    "descricao_prazo": "80 dias do faturamento"
+  },
+  {
+    "condicao": "A13",
+    "descricao_prazo": "81 dias do faturamento"
+  },
+  {
+    "condicao": "A14",
+    "descricao_prazo": "112 dias do faturamento"
+  },
+  {
+    "condicao": "A15",
+    "descricao_prazo": "115 dias do faturamento"
+  },
+  {
+    "condicao": "A16",
+    "descricao_prazo": "61 dias do faturamento"
+  },
+  {
+    "condicao": "A18",
+    "descricao_prazo": "180 dias do faturamento"
+  },
+  {
+    "condicao": "A21",
+    "descricao_prazo": "210 dias do faturamento"
+  },
+  {
+    "condicao": "A24",
+    "descricao_prazo": "240 dias do faturamento"
+  },
+  {
+    "condicao": "A25",
+    "descricao_prazo": "25 dias fora o mês"
+  },
+  {
+    "condicao": "A27",
+    "descricao_prazo": "270 dias do faturamento"
+  },
+  {
+    "condicao": "A70",
+    "descricao_prazo": "7 anos do faturamento"
+  },
+  {
+    "condicao": "AA1",
+    "descricao_prazo": "28-35 dias do faturamento"
+  },
+  {
+    "condicao": "AA2",
+    "descricao_prazo": "14 dias do faturamento"
+  },
+  {
+    "condicao": "AA4",
+    "descricao_prazo": "15 dias do faturamento"
+  },
+  {
+    "condicao": "AA5",
+    "descricao_prazo": "10 dias do faturamento"
+  },
+  {
+    "condicao": "AA6",
+    "descricao_prazo": "20 dias do faturamento"
+  },
+  {
+    "condicao": "AA7",
+    "descricao_prazo": "25 dias do faturamento"
+  },
+  {
+    "condicao": "AA8",
+    "descricao_prazo": "30-35 dias do faturamento"
+  },
+  {
+    "condicao": "AA9",
+    "descricao_prazo": "21 dias do faturamento"
+  },
+  {
+    "condicao": "AAA",
+    "descricao_prazo": "30-45-60 dias do faturamento"
+  },
+  {
+    "condicao": "AAB",
+    "descricao_prazo": "28-56 dias do faturamento"
+  },
+  {
+    "condicao": "AAC",
+    "descricao_prazo": "30-60-90 dias do faturamento"
+  },
+  {
+    "condicao": "AAC1",
+    "descricao_prazo": "40% a 30 ddl + 30% a 60 ddl + 30% a 90 ddl"
+  },
+  {
+    "condicao": "AAC2",
+    "descricao_prazo": "20% Vista - 40% 30dd - 20% 60dd - 20% 90dd"
+  },
+  {
+    "condicao": "AAC4",
+    "descricao_prazo": "20% Vista - 70% 30dd - 10% 60dd"
+  },
+  {
+    "condicao": "AAD",
+    "descricao_prazo": "60 dias do faturamento"
+  },
+  {
+    "condicao": "AAE",
+    "descricao_prazo": "70 dias do faturamento"
+  },
+  {
+    "condicao": "AAF",
+    "descricao_prazo": "45 dias do faturamento"
+  },
+  {
+    "condicao": "AAG",
+    "descricao_prazo": "35-45 dias do faturamento"
+  },
+  {
+    "condicao": "AAH",
+    "descricao_prazo": "28-35-42 dias do faturamento"
+  },
+  {
+    "condicao": "AAI",
+    "descricao_prazo": "42 dias do faturamento"
+  },
+  {
+    "condicao": "AAJ",
+    "descricao_prazo": "14-21-28 dias do faturamento"
+  },
+  {
+    "condicao": "AAK",
+    "descricao_prazo": "65 dias do faturamento"
+  },
+  {
+    "condicao": "AAL",
+    "descricao_prazo": "28 dias do faturamento"
+  },
+  {
+    "condicao": "AAM",
+    "descricao_prazo": "76 dias do faturamento"
+  },
+  {
+    "condicao": "AAN",
+    "descricao_prazo": "75 dias do faturamento"
+  },
+  {
+    "condicao": "AAO",
+    "descricao_prazo": "30-45 dias do faturamento"
+  },
+  {
+    "condicao": "AAQ",
+    "descricao_prazo": "90 dias do faturamento"
+  },
+  {
+    "condicao": "AAR",
+    "descricao_prazo": "40 dias do faturamento"
+  },
+  {
+    "condicao": "AAS",
+    "descricao_prazo": "7-14-21 dias do faturamento"
+  },
+  {
+    "condicao": "AAU",
+    "descricao_prazo": "35 dias do faturamento"
+  },
+  {
+    "condicao": "AAV",
+    "descricao_prazo": "28-42 dias do faturamento"
+  },
+  {
+    "condicao": "AAX",
+    "descricao_prazo": "30-60 dias do faturamento"
+  },
+  {
+    "condicao": "AAY",
+    "descricao_prazo": "20% a vista 80% 30 dias"
+  },
+  {
+    "condicao": "AAZ",
+    "descricao_prazo": "15-30 dias do faturamento"
+  },
+  {
+    "condicao": "AB4",
+    "descricao_prazo": "56 dias do faturamento"
+  },
+  {
+    "condicao": "AB7",
+    "descricao_prazo": "16-47-77 dias do faturamento"
+  },
+  {
+    "condicao": "AB8",
+    "descricao_prazo": "62 dias do faturamento"
+  },
+  {
+    "condicao": "AB9",
+    "descricao_prazo": "0-30-60 dias do faturamento"
+  },
+  {
+    "condicao": "ABA",
+    "descricao_prazo": "67 dias do faturamento"
+  },
+  {
+    "condicao": "ABF",
+    "descricao_prazo": "28-45 dias do faturamento"
+  },
+  {
+    "condicao": "ABH",
+    "descricao_prazo": "8 dias do faturamento"
+  },
+  {
+    "condicao": "ABM",
+    "descricao_prazo": "60-75 dias do faturamento"
+  },
+  {
+    "condicao": "ABN",
+    "descricao_prazo": "60-90 dias do faturamento"
+  },
+  {
+    "condicao": "ABQ",
+    "descricao_prazo": "30% sinal 40% 7 dias 30% 30 dias"
+  },
+  {
+    "condicao": "ABW",
+    "descricao_prazo": "30-37-44-51-58 dias do faturamento"
+  },
+  {
+    "condicao": "ABY",
+    "descricao_prazo": "50% ato 50% 28 dias do faturamento"
+  },
+  {
+    "condicao": "AC0",
+    "descricao_prazo": "30-35-40 dias do faturamento"
+  },
+  {
+    "condicao": "AC2",
+    "descricao_prazo": "20-40-60-80 dias do faturamento"
+  },
+  {
+    "condicao": "AC3",
+    "descricao_prazo": "21-28 dias do faturamento"
+  },
+  {
+    "condicao": "AC6",
+    "descricao_prazo": "13 dias do faturamento"
+  },
+  {
+    "condicao": "ACF",
+    "descricao_prazo": "30-37-44-51 dias do faturamento"
+  },
+  {
+    "condicao": "ACK",
+    "descricao_prazo": "12 dias do faturamento"
+  },
+  {
+    "condicao": "ACP",
+    "descricao_prazo": "57 dias do faturamento"
+  },
+  {
+    "condicao": "ACR",
+    "descricao_prazo": "40% vista 60% 28 dias do faturamento"
+  },
+  {
+    "condicao": "ACT",
+    "descricao_prazo": "35-42 dias do faturamento"
+  },
+  {
+    "condicao": "ACV",
+    "descricao_prazo": "39 dias do faturamento"
+  },
+  {
+    "condicao": "ACX",
+    "descricao_prazo": "66 dias do faturamento"
+  },
+  {
+    "condicao": "ACZ",
+    "descricao_prazo": "38 dias do faturamento"
+  },
+  {
+    "condicao": "AD6",
+    "descricao_prazo": "41 dias do faturamento"
+  },
+  {
+    "condicao": "AD8",
+    "descricao_prazo": "55 dias do faturamento"
+  },
+  {
+    "condicao": "AD9",
+    "descricao_prazo": "50% a vista 50% 21 dias do faturamento"
+  },
+  {
+    "condicao": "ADA",
+    "descricao_prazo": "0-30-60-90-120 DO FATURAMENTO"
+  },
+  {
+    "condicao": "ADB",
+    "descricao_prazo": "5 dias fora a quinzena"
+  },
+  {
+    "descricao_prazo": "5 dias fora a quinzena"
+  },
+  {
+    "condicao": "ADC",
+    "descricao_prazo": "5 dias fora a dezena"
+  },
+  {
+    "descricao_prazo": "5 dias fora o dezena"
+  },
+  {
+    "descricao_prazo": "5 dias fora o dezena"
+  },
+  {
+    "condicao": "ADD",
+    "descricao_prazo": "25 dias fora a dezena"
+  },
+  {
+    "descricao_prazo": "25 dias fora a dezena"
+  },
+  {
+    "descricao_prazo": "25 dias fora a dezena"
+  },
+  {
+    "condicao": "ADE",
+    "descricao_prazo": "21-52 dias do faturamento"
+  },
+  {
+    "condicao": "ADI",
+    "descricao_prazo": "78 dias do faturamento"
+  },
+  {
+    "condicao": "ADM",
+    "descricao_prazo": "10 dias fora o mês"
+  },
+  {
+    "condicao": "ADN",
+    "descricao_prazo": "51 dias do faturamento"
+  },
+  {
+    "condicao": "ADO",
+    "descricao_prazo": "77 dias do faturamento"
+  },
+  {
+    "condicao": "ADP",
+    "descricao_prazo": "5 dias fora o mês"
+  },
+  {
+    "condicao": "ADQ",
+    "descricao_prazo": "10 dias fora a quinzena"
+  },
+  {
+    "descricao_prazo": "10 dias fora a quinzena"
+  },
+  {
+    "condicao": "ADR",
+    "descricao_prazo": "48 dias no faturamento"
+  },
+  {
+    "condicao": "ADS",
+    "descricao_prazo": "50 dias do faturamento"
+  },
+  {
+    "condicao": "ADT",
+    "descricao_prazo": "28-56-84 dias do faturamento"
+  },
+  {
+    "condicao": "ADV",
+    "descricao_prazo": "120 dias do faturamento"
+  },
+  {
+    "condicao": "ADX",
+    "descricao_prazo": "49 dias do faturamento"
+  },
+  {
+    "condicao": "ADY",
+    "descricao_prazo": "30-60-90-120-150 dias do faturamento"
+  },
+  {
+    "condicao": "ADYA",
+    "descricao_prazo": "0-30-60-90-120-150 dias do Faturamento"
+  },
+  {
+    "condicao": "ADZ",
+    "descricao_prazo": "52 dias do faturamento"
+  },
+  {
+    "condicao": "AE2",
+    "descricao_prazo": "35-40-45 dias do faturamento"
+  },
+  {
+    "condicao": "AE3",
+    "descricao_prazo": "30% vista 70% 7 dias do faturamento"
+  },
+  {
+    "condicao": "AE4",
+    "descricao_prazo": "30% vista 70% 14 dias do faturamento"
+  },
+  {
+    "condicao": "AE5",
+    "descricao_prazo": "150 dias do faturamento"
+  },
+  {
+    "condicao": "AE6",
+    "descricao_prazo": "69 dias do faturamento"
+  },
+  {
+    "condicao": "AE9",
+    "descricao_prazo": "22-40 dias do faturamento"
+  },
+  {
+    "condicao": "AEA",
+    "descricao_prazo": "64 dias do faturamento"
+  },
+  {
+    "condicao": "AEC",
+    "descricao_prazo": "63 dias do faturamento"
+  },
+  {
+    "condicao": "AEG",
+    "descricao_prazo": "32 dias do faturamento"
+  },
+  {
+    "condicao": "AEH",
+    "descricao_prazo": "58 dias do faturamento"
+  },
+  {
+    "condicao": "AEP",
+    "descricao_prazo": "44 dias do faturamento"
+  },
+  {
+    "condicao": "AER",
+    "descricao_prazo": "98 dias do faturamento"
+  },
+  {
+    "condicao": "AEV",
+    "descricao_prazo": "53 dias do faturamento"
+  },
+  {
+    "condicao": "AEY",
+    "descricao_prazo": "30-60-90-120 dias do faturamento"
+  },
+  {
+    "condicao": "AF3",
+    "descricao_prazo": "91 dias do faturamento"
+  },
+  {
+    "condicao": "AF4",
+    "descricao_prazo": "21-42 dias do faturamento"
+  },
+  {
+    "condicao": "AF7",
+    "descricao_prazo": "30-48-62-76 dias do faturamento"
+  },
+  {
+    "condicao": "AFD",
+    "descricao_prazo": "39-46-53-60-67 dias do faturamento"
+  },
+  {
+    "condicao": "AFE",
+    "descricao_prazo": "105 dias do faturamento"
+  },
+  {
+    "condicao": "AFH",
+    "descricao_prazo": "54 dias do faturamento"
+  },
+  {
+    "condicao": "AFL",
+    "descricao_prazo": "37 dias do faturamento"
+  },
+  {
+    "condicao": "AFP",
+    "descricao_prazo": "30 dias fora mês"
+  },
+  {
+    "condicao": "AFS",
+    "descricao_prazo": "19-50-81-112 dias do faturamento"
+  },
+  {
+    "condicao": "AG1",
+    "descricao_prazo": "26 dias do faturamento"
+  },
+  {
+    "condicao": "AG2",
+    "descricao_prazo": "29 dias do faturamento"
+  },
+  {
+    "condicao": "AG6",
+    "descricao_prazo": "40-50-60 dias do faturamento"
+  },
+  {
+    "condicao": "AGA",
+    "descricao_prazo": "36-48-61-76 dias do faturamento"
+  },
+  {
+    "condicao": "AGI",
+    "descricao_prazo": "27 dias do faturamento"
+  },
+  {
+    "condicao": "AGO",
+    "descricao_prazo": "20-40-60 dias do faturamento"
+  },
+  {
+    "condicao": "AGQ",
+    "descricao_prazo": "4 dias do faturamento"
+  },
+  {
+    "condicao": "AGR",
+    "descricao_prazo": "6 dias do faturamento"
+  },
+  {
+    "condicao": "AGS",
+    "descricao_prazo": "9 dias do faturamento"
+  },
+  {
+    "condicao": "AGT",
+    "descricao_prazo": "11 dias do faturamento"
+  },
+  {
+    "condicao": "AGU",
+    "descricao_prazo": "16 dias do faturamento"
+  },
+  {
+    "condicao": "AGV",
+    "descricao_prazo": "17 dias do faturamento"
+  },
+  {
+    "condicao": "AGW",
+    "descricao_prazo": "24 dias do faturamento"
+  },
+  {
+    "condicao": "AGX",
+    "descricao_prazo": "19 dias do faturamento"
+  },
+  {
+    "condicao": "AGY",
+    "descricao_prazo": "22 dias do faturamento"
+  },
+  {
+    "condicao": "AGZ",
+    "descricao_prazo": "23 dias do faturamento"
+  },
+  {
+    "condicao": "AH5",
+    "descricao_prazo": "55-85-115 dias do faturamento"
+  },
+  {
+    "condicao": "AHA",
+    "descricao_prazo": "30-60-90-120-150-180 dias do faturamento"
+  },
+  {
+    "condicao": "AHI",
+    "descricao_prazo": "5-30-60-90 dias do faturamento"
+  },
+  {
+    "condicao": "AI6",
+    "descricao_prazo": "87 dias do faturamento"
+  },
+  {
+    "condicao": "AIB",
+    "descricao_prazo": "72 dias do faturamento"
+  },
+  {
+    "condicao": "AII",
+    "descricao_prazo": "20 dias fora o mês"
+  },
+  {
+    "condicao": "AIJ",
+    "descricao_prazo": "110 dias do faturamento"
+  },
+  {
+    "condicao": "AIK",
+    "descricao_prazo": "28 dias fora o mês"
+  },
+  {
+    "condicao": "AIL",
+    "descricao_prazo": "89 dias do faturamento"
+  },
+  {
+    "condicao": "AIM",
+    "descricao_prazo": "20 e 10 qora a quinzena"
+  },
+  {
+    "descricao_prazo": "20 e 10 fora a quinzena"
+  },
+  {
+    "condicao": "AIP",
+    "descricao_prazo": "47 dias do faturamento"
+  },
+  {
+    "condicao": "APM",
+    "descricao_prazo": "1ª Quarta-feira - 28-35-42 dias"
+  },
+  {
+    "condicao": "AQA",
+    "descricao_prazo": "82 dias do faturamento"
+  },
+  {
+    "condicao": "AQC",
+    "descricao_prazo": "85 dias do faturamento"
+  },
+  {
+    "condicao": "AQM",
+    "descricao_prazo": "15 dias fora o mês"
+  },
+  {
+    "condicao": "AQN",
+    "descricao_prazo": "5 dias fora o mês"
+  },
+  {
+    "condicao": "AQQ",
+    "descricao_prazo": "15 dias fora a quinzena"
+  },
+  {
+    "descricao_prazo": "15 dias fora a quinzena"
+  },
+  {
+    "condicao": "AQU",
+    "descricao_prazo": "33 dias do faturamento"
+  },
+  {
+    "condicao": "AQZ",
+    "descricao_prazo": "23-54 dias do faturamento"
+  },
+  {
+    "condicao": "AV2",
+    "descricao_prazo": "59 dias do faturamento"
+  },
+  {
+    "condicao": "AVM",
+    "descricao_prazo": "92 dias do faturamento"
+  },
+  {
+    "condicao": "AVV",
+    "descricao_prazo": "31 dias do faturamento"
+  },
+  {
+    "condicao": "AVY",
+    "descricao_prazo": "75 dias do faturamento"
+  },
+  {
+    "condicao": "AVZ",
+    "descricao_prazo": "90 dias do faturamento"
+  },
+  {
+    "condicao": "AXA",
+    "descricao_prazo": "71 dias do faturamento"
+  },
+  {
+    "condicao": "AXL",
+    "descricao_prazo": "43 dias do faturamento"
+  },
+  {
+    "condicao": "BIA",
+    "descricao_prazo": "15-30-45 dias do faturamento"
+  },
+  {
+    "condicao": "BIT",
+    "descricao_prazo": "50% a vista 50% 30 dias do faturamento"
+  },
+  {
+    "condicao": "BYZ",
+    "descricao_prazo": "34 dias do faturamento"
+  },
+  {
+    "condicao": "CCRE",
+    "descricao_prazo": "Bloqueio Pagto Cartão Credito"
+  },
+  {
+    "condicao": "CL2",
+    "descricao_prazo": "Vencto Próxima Segunda-feira"
+  },
+  {
+    "condicao": "CL3",
+    "descricao_prazo": "Vencto Próxima Terca-feira"
+  },
+  {
+    "condicao": "D00",
+    "descricao_prazo": "À vista"
+  },
+  {
+    "descricao_prazo": "À vista"
+  },
+  {
+    "descricao_prazo": "À vista"
+  },
+  {
+    "descricao_prazo": "À vista"
+  },
+  {
+    "condicao": "D001",
+    "descricao_prazo": "pagável imediatam.s/deduções"
+  },
+  {
+    "descricao_prazo": "pagável imediatam.s/deduções"
+  },
+  {
+    "descricao_prazo": "pagável imediatam.s/deduções"
+  },
+  {
+    "condicao": "D03",
+    "descricao_prazo": "3 dias do faturamento"
+  },
+  {
+    "condicao": "D030",
+    "descricao_prazo": "À vista - 10, 20 e 30"
+  },
+  {
+    "condicao": "D05",
+    "descricao_prazo": "5 dias do faturamento"
+  },
+  {
+    "condicao": "D07",
+    "descricao_prazo": "7 dias do faturamento"
+  },
+  {
+    "condicao": "D08",
+    "descricao_prazo": "8 dias do faturamento"
+  },
+  {
+    "condicao": "D20",
+    "descricao_prazo": "Pagto 4 parc. venc dia 20"
+  },
+  {
+    "condicao": "D201",
+    "descricao_prazo": "A partir dia 20 1o mês seguinte"
+  },
+  {
+    "condicao": "D202",
+    "descricao_prazo": "A partir dia 20 2o mês seguinte"
+  },
+  {
+    "condicao": "D203",
+    "descricao_prazo": "A partir dia 20 3o mês seguinte"
+  },
+  {
+    "condicao": "D204",
+    "descricao_prazo": "A partir dia 20 4o mês seguinte"
+  },
+  {
+    "condicao": "D30",
+    "descricao_prazo": "Último dia do mês (30) Florestal"
+  },
+  {
+    "condicao": "DA2",
+    "descricao_prazo": "14 dias do faturamento"
+  },
+  {
+    "condicao": "DA4",
+    "descricao_prazo": "15 dias do faturamento"
+  },
+  {
+    "condicao": "DA5",
+    "descricao_prazo": "10 dias do faturamento"
+  },
+  {
+    "condicao": "DA6",
+    "descricao_prazo": "20 dias do faturamento"
+  },
+  {
+    "condicao": "DA9",
+    "descricao_prazo": "21 dias do faturamento"
+  },
+  {
+    "condicao": "DAN",
+    "descricao_prazo": "75 dias do faturamento"
+  },
+  {
+    "condicao": "DBH",
+    "descricao_prazo": "8 dias do faturamento"
+  },
+  {
+    "condicao": "DD10",
+    "descricao_prazo": "20 dias fora o decêndio"
+  },
+  {
+    "descricao_prazo": "10 dias fora o decêndio"
+  },
+  {
+    "descricao_prazo": "10 dias fora o decêndio"
+  },
+  {
+    "condicao": "DD20",
+    "descricao_prazo": "20 dias fora o decêndio"
+  },
+  {
+    "descricao_prazo": "20 dias fora o decêndio"
+  },
+  {
+    "descricao_prazo": "20 dias fora o decêndio"
+  },
+  {
+    "condicao": "DDL",
+    "descricao_prazo": "0-30-60-90-120-150-180-210-240 dias do faturamento"
+  },
+  {
+    "condicao": "DDM",
+    "descricao_prazo": "10 dias fora o mês"
+  },
+  {
+    "condicao": "DII",
+    "descricao_prazo": "20 dias fora o mês"
+  },
+  {
+    "condicao": "DIM",
+    "descricao_prazo": "20 e 10 fora a quinzena"
+  },
+  {
+    "descricao_prazo": "20 e 10 fora a quinzena"
+  },
+  {
+    "condicao": "DQS",
+    "descricao_prazo": "10 fora mes, 40 e 70 da fatura"
+  },
+  {
+    "condicao": "EAN",
+    "descricao_prazo": "75 days from BL date"
+  },
+  {
+    "condicao": "EAR",
+    "descricao_prazo": "40 days from BL date"
+  },
+  {
+    "condicao": "EQC",
+    "descricao_prazo": "85 days from BL date"
+  },
+  {
+    "condicao": "F30",
+    "descricao_prazo": "1ª Quinta-feira após 30 dias"
+  },
+  {
+    "condicao": "FINA",
+    "descricao_prazo": "Bloqueio Pagto FINAME"
+  },
+  {
+    "condicao": "NT00",
+    "descricao_prazo": "Pagamento imediato"
+  },
+  {
+    "condicao": "NT30",
+    "descricao_prazo": "Dentro de 30 dias"
+  },
+  {
+    "condicao": "NT45",
+    "descricao_prazo": "Dentro de 45 dias"
+  },
+  {
+    "condicao": "NT60",
+    "descricao_prazo": "Dentro de 60 dias"
+  },
+  {
+    "condicao": "P01",
+    "descricao_prazo": "30 dias do faturamento Vencto dia 10"
+  },
+  {
+    "condicao": "P02",
+    "descricao_prazo": "60 dias do faturamento Vencto dia 10"
+  },
+  {
+    "condicao": "P03",
+    "descricao_prazo": "90 dias do faturamento Vencto dia 10"
+  },
+  {
+    "condicao": "P04",
+    "descricao_prazo": "150 dias do faturamento Vencto dia 10"
+  },
+  {
+    "condicao": "P05",
+    "descricao_prazo": "180 dias do faturamento Vencto dia 10"
+  },
+  {
+    "condicao": "P06",
+    "descricao_prazo": "6 pagtos 1o - dia 10 do mês"
+  },
+  {
+    "condicao": "P07",
+    "descricao_prazo": "PAGAMENTO 10/20/30"
+  },
+  {
+    "descricao_prazo": "PAGAMENTO 10/20/30"
+  },
+  {
+    "descricao_prazo": "PAGAMENTO 10/20/30"
+  },
+  {
+    "condicao": "P09",
+    "descricao_prazo": "D1a9-V10 / D10a19-V20 / D20a31-V01"
+  },
+  {
+    "descricao_prazo": "D1a9-V10 / D10a19-V20 / D20a31-V01"
+  },
+  {
+    "descricao_prazo": "D1a9-V10 / D10a19-V20 / D20a31-V01"
+  },
+  {
+    "condicao": "P12",
+    "descricao_prazo": "12 pagtos 1o - dia 10 do mês"
+  },
+  {
+    "condicao": "P21",
+    "descricao_prazo": "210 dias do faturamento - Vencto dia 10"
+  },
+  {
+    "condicao": "P24",
+    "descricao_prazo": "240 dias do faturamento - Vencto dia 10"
+  },
+  {
+    "condicao": "P27",
+    "descricao_prazo": "270 dias do faturamento Vencto dia 10"
+  },
+  {
+    "condicao": "P30",
+    "descricao_prazo": "300 dias do faturamento Vencto dia 10"
+  },
+  {
+    "descricao_prazo": "30 dias fatura - Pgto 10,20,30"
+  },
+  {
+    "descricao_prazo": "30 dias fatura - Pgto 10,20,30"
+  },
+  {
+    "descricao_prazo": "30 dias fatura - Pgto 10,20,30"
+  },
+  {
+    "condicao": "P31",
+    "descricao_prazo": "180 dias L/C"
+  },
+  {
+    "condicao": "P33",
+    "descricao_prazo": "330 dias do faturamento Vencto dia 10"
+  },
+  {
+    "condicao": "P36",
+    "descricao_prazo": "360 dias do faturamento Vencto dia 10"
+  },
+  {
+    "condicao": "PCP",
+    "descricao_prazo": "180 dias L/C"
+  },
+  {
+    "condicao": "PP10",
+    "descricao_prazo": "Pagamento dia 10 do mês"
+  },
+  {
+    "condicao": "Q12",
+    "descricao_prazo": "dentro de 120 dias s/desconto"
+  },
+  {
+    "condicao": "Q14",
+    "descricao_prazo": "14 dias da fatura - 05,15,25"
+  },
+  {
+    "descricao_prazo": "14 dias da fatura - 05,15,25"
+  },
+  {
+    "descricao_prazo": "14 dias da fatura - 05,15,25"
+  },
+  {
+    "descricao_prazo": "14 dias da fatura - 05,15,25"
+  },
+  {
+    "condicao": "Q28",
+    "descricao_prazo": "1ª Quinta-feira após 28 dias"
+  },
+  {
+    "condicao": "Q60",
+    "descricao_prazo": "1º Quarta-feira após 60 dias"
+  },
+  {
+    "condicao": "Q90",
+    "descricao_prazo": "1ª Quarta-feira após 90 dias"
+  },
+  {
+    "condicao": "R30",
+    "descricao_prazo": "30 dias da fatura - 05,15,25"
+  },
+  {
+    "descricao_prazo": "30 dias da fatura - 05,15,25"
+  },
+  {
+    "descricao_prazo": "30 dias da fatura - 05,15,25"
+  },
+  {
+    "descricao_prazo": "30 dias da fatura - 05,15,25"
+  },
+  {
+    "descricao_prazo": "30 dias da fatura - 05,15,25"
+  },
+  {
+    "condicao": "U02",
+    "descricao_prazo": "Vencto a partir de 2o dia do mês"
+  },
+  {
+    "condicao": "U30",
+    "descricao_prazo": "Último dia do mês (30) Florestal"
+  },
+  {
+    "condicao": "V12",
+    "descricao_prazo": "120 dias após 30 do faturamento"
+  },
+  {
+    "condicao": "V15",
+    "descricao_prazo": "150 dias após 30 do faturamento"
+  },
+  {
+    "condicao": "V18",
+    "descricao_prazo": "180 dias após 30 do faturamento"
+  },
+  {
+    "condicao": "V30",
+    "descricao_prazo": "25 dias após 30 do faturamento"
+  },
+  {
+    "condicao": "V60",
+    "descricao_prazo": "60 dias após 30 dd do faturamento"
+  },
+  {
+    "condicao": "V90",
+    "descricao_prazo": "90 dias, após 30 dd do faturamento"
+  },
+  {
+    "condicao": "VIV",
+    "descricao_prazo": "10 pagtos 1o 25 dias fora mês"
+  },
+  {
+    "condicao": "X28",
+    "descricao_prazo": "28 Days from B/L Date"
+  },
+  {
+    "condicao": "XLX",
+    "descricao_prazo": "36 dias do faturamento"
+  }
+]

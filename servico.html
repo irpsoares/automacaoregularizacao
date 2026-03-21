@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dados de Serviço</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-conteudo">
+      <img src="./assets/logo-bracell.png" alt="Logo Bracell" class="logo" />
+      <div class="titulos">
+        <h1>Regularização - Serviço</h1>
+        <p>Preenchimento complementar dos dados de serviço</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="card-titulo">RESUMO DA CAPA</div>
+      <div class="card-corpo">
+        <div id="resumoCapaServico" class="painel-resultado">Carregando resumo...</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-titulo">DADOS DO SERVIÇO</div>
+      <div class="card-corpo">
+        <div class="grid grid-3">
+          <div class="campo">
+            <label for="destinacaoServico">Destinação do Serviço</label>
+            <select id="destinacaoServico"></select>
+          </div>
+
+          <div class="campo">
+            <label for="classificacaoContabil">Classificação Contábil</label>
+            <select id="classificacaoContabil"></select>
+          </div>
+
+          <div class="campo">
+            <label for="tipoDistribuicao">Tipo de Distribuição Contábil</label>
+            <select id="tipoDistribuicao"></select>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="campo">
+            <label for="descricaoServico">Descrição do Serviço</label>
+            <input id="descricaoServico" type="text">
+          </div>
+
+          <div class="campo">
+            <label for="valorServico">Valor do Serviço</label>
+            <input id="valorServico" type="number" min="0.01" max="200" step="0.01">
+          </div>
+        </div>
+
+        <div class="botoes">
+          <button id="btnValidarServico" class="btn btn-primario" type="button">Validar Serviço</button>
+          <button id="btnSalvarServico" class="btn btn-secundario" type="button">Salvar</button>
+          <button id="btnVoltar" class="btn btn-neutro" type="button">Voltar</button>
+        </div>
+
+        <div class="espacador"></div>
+        <div id="resultadoServico" class="painel-resultado">Preencha os dados do serviço.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/servico.js"></script>
+</body>
+</html>

@@ -8,9 +8,6 @@
   --texto: #1f2937;
   --texto-suave: #667085;
   --borda: #d7e2ec;
-  --aviso: #f59e0b;
-  --erro: #dc2626;
-  --sucesso: #15803d;
   --sombra: 0 10px 30px rgba(16, 24, 40, 0.08);
 }
 
@@ -41,7 +38,7 @@ body {
 }
 
 .logo {
-  height: 54px;
+  height: 56px;
   width: auto;
   object-fit: contain;
   background: white;
@@ -208,9 +205,9 @@ textarea {
   border-radius: 14px;
   background: #f9fcff;
   padding: 16px;
-  min-height: 120px;
+  min-height: 140px;
   white-space: pre-line;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .badges {
@@ -235,6 +232,10 @@ textarea {
 .badge-verde {
   background: rgba(156, 200, 87, 0.2);
   color: var(--verde-escuro);
+}
+
+.espacador {
+  height: 16px;
 }
 
 .rodape {

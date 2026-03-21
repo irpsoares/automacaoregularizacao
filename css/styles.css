@@ -205,9 +205,14 @@ textarea {
   border-radius: 14px;
   background: #f9fcff;
   padding: 16px;
-  min-height: 150px;
+  min-height: 120px;
   white-space: pre-line;
   line-height: 1.6;
+}
+
+.painel-menor {
+  min-height: 80px;
+  margin-top: 16px;
 }
 
 .badges {
@@ -243,6 +248,35 @@ textarea {
   color: var(--texto-suave);
   font-size: 13px;
   padding: 10px 0 30px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modal.aberto {
+  display: flex;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 860px;
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box h2 {
+  margin-top: 0;
+  color: var(--azul-escuro);
 }
 
 @media (max-width: 1024px) {

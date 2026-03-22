@@ -23,7 +23,6 @@ async function carregarJson(caminho) {
 
 function preencherSelect(select, dados, config) {
   select.innerHTML = '<option value="">Selecione</option>';
-
   dados.forEach(item => {
     const option = document.createElement('option');
     option.value = valorSeguro(item[config.value]);
@@ -34,7 +33,6 @@ function preencherSelect(select, dados, config) {
 
 function carregarResumoCapa() {
   const capa = JSON.parse(localStorage.getItem('regularizacao_capa') || '{}');
-
   if (!capa.tipoRegularizacao) {
     resumoCapaServico.textContent = 'Nenhum dado da capa encontrado.';
     return;
@@ -84,23 +82,14 @@ function validarServico() {
   if (!campoTipoDistribuicao.value) mensagens.push('Selecione o tipo de distribuição contábil.');
   if (!campoDescricaoServico.value) mensagens.push('Informe a descrição do serviço.');
   if (!campoValorServico.value) mensagens.push('Informe o valor do serviço.');
-
-  if (campoDescricaoServico.value && campoDescricaoServico.value.trim().length < 10) {
-    mensagens.push('A descrição do serviço deve ter pelo menos 10 caracteres.');
-  }
+  if (campoDescricaoServico.value && campoDescricaoServico.value.trim().length < 10) mensagens.push('A descrição do serviço deve ter pelo menos 10 caracteres.');
 
   if (campoValorServico.value) {
-    if (Number.isNaN(valor) || valor <= 0) {
-      mensagens.push('Valor do serviço inválido.');
-    } else if (valor > 200) {
-      mensagens.push('O valor do serviço não pode ser maior que R$ 200,00.');
-    }
+    if (Number.isNaN(valor) || valor <= 0) mensagens.push('Valor do serviço inválido.');
+    else if (valor > 200) mensagens.push('O valor do serviço não pode ser maior que R$ 200,00.');
   }
 
-  if (mensagens.length === 0) {
-    mensagens.push('Dados de serviço validados com sucesso.');
-  }
-
+  if (mensagens.length === 0) mensagens.push('Dados de serviço validados com sucesso.');
   resultadoServico.textContent = mensagens.join('\n');
   return mensagens.length === 1;
 }
@@ -120,7 +109,8 @@ document.getElementById('btnSalvarServico').addEventListener('click', () => {
   };
 
   localStorage.setItem('regularizacao_servico', JSON.stringify(dados));
-  resultadoServico.textContent = 'Dados de serviço salvos com sucesso.';
+  resultadoServico.textContent = 'Dados de serviço salvos com sucesso. Redirecionando para o workflow...';
+  setTimeout(() => { window.location.href = './workflow.html'; }, 500);
 });
 
 document.getElementById('btnVoltar').addEventListener('click', () => {

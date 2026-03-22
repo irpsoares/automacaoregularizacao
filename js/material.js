@@ -25,7 +25,6 @@ async function carregarJson(caminho) {
 
 function preencherSelect(select, dados, config) {
   select.innerHTML = '<option value="">Selecione</option>';
-
   dados.forEach(item => {
     const option = document.createElement('option');
     option.value = valorSeguro(item[config.value]);
@@ -36,7 +35,6 @@ function preencherSelect(select, dados, config) {
 
 function carregarResumoCapa() {
   const capa = JSON.parse(localStorage.getItem('regularizacao_capa') || '{}');
-
   if (!capa.tipoRegularizacao) {
     resumoCapaMaterial.textContent = 'Nenhum dado da capa encontrado.';
     return;
@@ -93,23 +91,14 @@ function validarMaterial() {
   if (!campoFrete.value) mensagens.push('Selecione o frete.');
   if (!campoQuantidade.value) mensagens.push('Informe a quantidade.');
   if (!campoValorMaterial.value) mensagens.push('Informe o valor do material.');
-
-  if (campoQuantidade.value && Number(campoQuantidade.value) <= 0) {
-    mensagens.push('A quantidade deve ser maior que zero.');
-  }
+  if (campoQuantidade.value && Number(campoQuantidade.value) <= 0) mensagens.push('A quantidade deve ser maior que zero.');
 
   if (campoValorMaterial.value) {
-    if (Number.isNaN(valor) || valor <= 0) {
-      mensagens.push('Valor do material inválido.');
-    } else if (valor > 200) {
-      mensagens.push('O valor do material não pode ser maior que R$ 200,00.');
-    }
+    if (Number.isNaN(valor) || valor <= 0) mensagens.push('Valor do material inválido.');
+    else if (valor > 200) mensagens.push('O valor do material não pode ser maior que R$ 200,00.');
   }
 
-  if (mensagens.length === 0) {
-    mensagens.push('Dados de material validados com sucesso.');
-  }
-
+  if (mensagens.length === 0) mensagens.push('Dados de material validados com sucesso.');
   resultadoMaterial.textContent = mensagens.join('\n');
   return mensagens.length === 1;
 }
@@ -130,7 +119,8 @@ document.getElementById('btnSalvarMaterial').addEventListener('click', () => {
   };
 
   localStorage.setItem('regularizacao_material', JSON.stringify(dados));
-  resultadoMaterial.textContent = 'Dados de material salvos com sucesso.';
+  resultadoMaterial.textContent = 'Dados de material salvos com sucesso. Redirecionando para o workflow...';
+  setTimeout(() => { window.location.href = './workflow.html'; }, 500);
 });
 
 document.getElementById('btnVoltar').addEventListener('click', () => {

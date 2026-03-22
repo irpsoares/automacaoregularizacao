@@ -19,17 +19,85 @@
 
   <main class="container">
     <nav class="progress">
-      <div class="progress-step completed">
-        <span class="progress-number">1</span>
-        <span class="progress-label">Política + Capa</span>
-      </div>
+      <div class="progress-step completed"><span class="progress-number">1</span><span class="progress-label">Política + Capa</span></div>
       <div class="progress-line active"></div>
-      <div class="progress-step completed">
-        <span class="progress-number">2</span>
-        <span class="progress-label">Detalhamento</span>
-      </div>
+      <div class="progress-step completed"><span class="progress-number">2</span><span class="progress-label">Detalhamento</span></div>
       <div class="progress-line active"></div>
-      <div class="progress-step active">
-        <span class="progress-number">3</span>
-        <span class="progress-label">Workflow</span>
+      <div class="progress-step active"><span class="progress-number">3</span><span class="progress-label">Workflow</span></div>
+      <div class="progress-line"></div>
+      <div class="progress-step"><span class="progress-number">4</span><span class="progress-label">Aprovação Final</span></div>
+    </nav>
+
+    <section class="card">
+      <div class="card-titulo">RESUMO DA SOLICITAÇÃO</div>
+      <div class="card-corpo">
+        <div id="resumoSolicitacao" class="painel-resultado">Carregando dados...</div>
       </div>
+    </section>
+
+    <section class="card">
+      <div class="card-titulo">ETAPA 1 - VALIDAÇÃO TRIBUTÁRIA</div>
+      <div class="card-corpo">
+        <div class="grid grid-3">
+          <div class="campo"><label for="statusTributario">Status Tributário</label>
+            <select id="statusTributario">
+              <option value="">Selecione</option>
+              <option value="pendente">Pendente</option>
+              <option value="aprovado">Aprovado</option>
+              <option value="ajuste">Necessita Ajuste</option>
+              <option value="rejeitado">Rejeitado</option>
+            </select>
+          </div>
+          <div class="campo"><label for="enquadramentoFiscal">Enquadramento Fiscal</label>
+            <select id="enquadramentoFiscal">
+              <option value="">Selecione</option>
+              <option value="ok">Condição fiscal OK</option>
+              <option value="divergencia">Divergência fiscal</option>
+              <option value="tributacao_especial">Tributação especial</option>
+            </select>
+          </div>
+          <div class="campo"><label for="dataValidacaoTributaria">Data da Validação</label><input id="dataValidacaoTributaria" type="date"></div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="campo"><label for="tributarioResponsavel">Responsável Tributário</label><input id="tributarioResponsavel" type="text" placeholder="Nome do responsável"></div>
+          <div class="campo"><label for="observacaoTributaria">Observação Tributária</label><textarea id="observacaoTributaria" placeholder="Descreva a análise tributária"></textarea></div>
+        </div>
+
+        <div class="botoes"><button id="btnValidarTributario" class="btn btn-primario" type="button">Validar Etapa Tributária</button></div>
+        <div class="espacador"></div>
+        <div id="resultadoTributario" class="painel-resultado">Preencha e valide a etapa tributária.</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-titulo">ETAPA 2 - FLUXO DE APROVAÇÃO</div>
+      <div class="card-corpo">
+        <div class="timeline" id="timelineWorkflow">
+          <div class="timeline-item"><div class="timeline-badge">1</div><div class="timeline-content"><h3>Coordenação / Primeira Aprovação</h3><p id="wfCoordenacao">Carregando...</p></div></div>
+          <div class="timeline-item"><div class="timeline-badge">2</div><div class="timeline-content"><h3>Controladoria</h3><p id="wfControladoria">Carregando...</p></div></div>
+          <div class="timeline-item"><div class="timeline-badge">3</div><div class="timeline-content"><h3>Diretor / Head</h3><p id="wfDiretor">Carregando...</p></div></div>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="campo"><label for="statusGovernancaFinal">Status da Governança</label><input id="statusGovernancaFinal" class="leitura" type="text" readonly></div>
+          <div class="campo"><label for="proximaEtapaGovernanca">Próxima Etapa</label><input id="proximaEtapaGovernanca" class="leitura" type="text" readonly></div>
+          <div class="campo"><label for="responsavelAtualGovernanca">Responsável Atual</label><input id="responsavelAtualGovernanca" class="leitura" type="text" readonly></div>
+          <div class="campo"><label for="tipoFluxoGovernanca">Tipo do Fluxo</label><input id="tipoFluxoGovernanca" class="leitura" type="text" readonly></div>
+        </div>
+
+        <div class="botoes">
+          <button id="btnConcluirWorkflow" class="btn btn-secundario" type="button">Concluir Workflow</button>
+          <button id="btnVoltarWorkflow" class="btn btn-neutro" type="button">Voltar</button>
+          <button id="btnLimparWorkflow" class="btn btn-neutro" type="button">Limpar Etapa</button>
+        </div>
+
+        <div class="espacador"></div>
+        <div id="resultadoWorkflow" class="painel-resultado">A etapa de aprovação será liberada após a validação tributária.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/workflow.js"></script>
+</body>
+</html>

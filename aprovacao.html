@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Final de Aprovação</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-conteudo">
+      <img src="./assets/logo-bracell.png" alt="Logo Bracell" class="logo" />
+      <div class="titulos">
+        <h1>Painel Final de Aprovação</h1>
+        <p>Status consolidado da solicitação e governança do processo</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="progress">
+      <div class="progress-step completed"><span class="progress-number">1</span><span class="progress-label">Política + Capa</span></div>
+      <div class="progress-line active"></div>
+      <div class="progress-step completed"><span class="progress-number">2</span><span class="progress-label">Detalhamento</span></div>
+      <div class="progress-line active"></div>
+      <div class="progress-step completed"><span class="progress-number">3</span><span class="progress-label">Workflow</span></div>
+      <div class="progress-line active"></div>
+      <div class="progress-step active"><span class="progress-number">4</span><span class="progress-label">Aprovação Final</span></div>
+    </nav>
+
+    <section class="card">
+      <div class="card-titulo">STATUS GERAL</div>
+      <div class="card-corpo">
+        <div class="status-grid">
+          <div class="status-card status-pendente"><h3>Status da Solicitação</h3><p id="statusSolicitacao">Carregando...</p></div>
+          <div class="status-card status-analise"><h3>Status Tributário</h3><p id="statusTributarioResumo">Carregando...</p></div>
+          <div class="status-card status-info"><h3>Tipo de Governança</h3><p id="tipoGovernancaResumo">Carregando...</p></div>
+          <div class="status-card status-info"><h3>Responsável Atual</h3><p id="responsavelAtualResumo">Carregando...</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card"><div class="card-titulo">RESUMO DA CAPA</div><div class="card-corpo"><div id="resumoCapaFinal" class="painel-resultado">Carregando...</div></div></section>
+    <section class="card"><div class="card-titulo">RESUMO DO DETALHAMENTO</div><div class="card-corpo"><div id="resumoDetalheFinal" class="painel-resultado">Carregando...</div></div></section>
+
+    <section class="card">
+      <div class="card-titulo">TRILHA DE APROVAÇÃO</div>
+      <div class="card-corpo">
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-badge">1</div><div class="timeline-content"><h3>Validação Tributária</h3><p id="aprovacaoTributaria">Carregando...</p></div></div>
+          <div class="timeline-item"><div class="timeline-badge">2</div><div class="timeline-content"><h3>Coordenação / Primeira Aprovação</h3><p id="aprovacaoCoordenacao">Carregando...</p></div></div>
+          <div class="timeline-item"><div class="timeline-badge">3</div><div class="timeline-content"><h3>Controladoria</h3><p id="aprovacaoControladoria">Carregando...</p></div></div>
+          <div class="timeline-item"><div class="timeline-badge">4</div><div class="timeline-content"><h3>Diretor / Head</h3><p id="aprovacaoDiretor">Carregando...</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-titulo">DECISÃO FINAL (SIMULAÇÃO)</div>
+      <div class="card-corpo">
+        <div class="grid grid-3">
+          <div class="campo">
+            <label for="decisaoFinal">Decisão Final</label>
+            <select id="decisaoFinal">
+              <option value="">Selecione</option>
+              <option value="aprovado">Aprovado</option>
+              <option value="pendente">Pendente</option>
+              <option value="rejeitado">Rejeitado</option>
+              <option value="ajuste">Necessita Ajuste</option>
+            </select>
+          </div>
+          <div class="campo"><label for="responsavelDecisao">Responsável pela Decisão</label><input id="responsavelDecisao" type="text" placeholder="Informe o responsável"></div>
+          <div class="campo"><label for="dataDecisao">Data da Decisão</label><input id="dataDecisao" type="date"></div>
+        </div>
+
+        <div class="campo"><label for="observacaoFinal">Observação Final</label><textarea id="observacaoFinal" placeholder="Descreva o parecer final"></textarea></div>
+
+        <div class="botoes">
+          <button id="btnValidarDecisao" class="btn btn-primario" type="button">Validar Decisão</button>
+          <button id="btnSalvarDecisao" class="btn btn-secundario" type="button">Salvar Painel Final</button>
+          <button id="btnVoltarAprovacao" class="btn btn-neutro" type="button">Voltar ao Workflow</button>
+          <button id="btnLimparAprovacao" class="btn btn-neutro" type="button">Limpar</button>
+        </div>
+
+        <div class="espacador"></div>
+        <div id="resultadoAprovacaoFinal" class="painel-resultado">Preencha a decisão final para concluir a apresentação da governança.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/aprovacao.js"></script>
+</body>
+</html>

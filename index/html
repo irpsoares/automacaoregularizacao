@@ -1,29 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automação de Regularização</title>
-  <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema ZREG - Solicitação</title>
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
+  <div id="modalPolitica" class="modal aberto">
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <h2>Política de Regularização</h2>
+        <p>Leia e responda as perguntas obrigatórias antes de iniciar a solicitação.</p>
+      </div>
+
+      <div class="alerta alerta-vermelho">
+        Casos fora dos critérios podem ser tratados como anomalia e direcionados para Controladoria, RH e BU Head. Sem nota fiscal não é permitido continuar. O descumprimento das diretrizes pode gerar penalização conforme código de conduta interno.
+      </div>
+
+      <div class="grid grid-2">
+        <div class="campo">
+          <label for="perguntaEmergencial">É uma situação emergencial?</label>
+          <select id="perguntaEmergencial">
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+          <small class="dica">Se não for emergência, a aprovação deve ir direto ao Head/Diretor e a política de compras deve ser comunicada explicitamente ao usuário.</small>
+        </div>
+
+        <div class="campo">
+          <label for="perguntaNotaFiscal">Existe nota fiscal para a solicitação?</label>
+          <select id="perguntaNotaFiscal">
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+          <small class="dica">Se não houver nota fiscal, o processo deve ser bloqueado em hipótese nenhuma.</small>
+        </div>
+
+        <div class="campo">
+          <label for="perguntaImpedimento">Houve impedimento no fluxo normal de compra?</label>
+          <select id="perguntaImpedimento">
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="perguntaJustificativa">A justificativa será detalhada?</label>
+          <select id="perguntaJustificativa">
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="botoes">
+        <button id="btnContinuarPolitica" class="btn btn-primario" type="button">Validar Política</button>
+      </div>
+
+      <div id="resultadoPolitica" class="painel-resultado painel-menor">Responda as perguntas para continuar.</div>
+    </div>
+  </div>
+
   <header class="topo">
     <div class="topo-conteudo">
-      <img src="./assets/logo-bracell.png" alt="Logo Bracell" class="logo">
+      <img src="./assets/logo-bracell.png" alt="Logo Bracell" class="logo" />
       <div class="titulos">
-        <h1>Automação de Regularização</h1>
-        <p>Solicitação e validação inicial de regularização de materiais e serviços</p>
+        <h1>Sistema ZREG</h1>
+        <p>Cadastro inicial da solicitação com base na nota fiscal</p>
+      </div>
+      <div class="topo-acoes">
+        <a href="./dashboard.html" class="btn btn-neutro">Dashboard</a>
+        <a href="./fluxo_zreg.html" class="btn btn-neutro">Fluxo</a>
       </div>
     </div>
   </header>
 
   <main class="container">
+    <nav class="progress">
+      <div class="progress-step active"><span class="progress-number">1</span><span class="progress-label">Política + Capa</span></div>
+      <div class="progress-line"></div>
+      <div class="progress-step"><span class="progress-number">2</span><span class="progress-label">Detalhamento</span></div>
+      <div class="progress-line"></div>
+      <div class="progress-step"><span class="progress-number">3</span><span class="progress-label">Workflow</span></div>
+      <div class="progress-line"></div>
+      <div class="progress-step"><span class="progress-number">4</span><span class="progress-label">Aprovação Final</span></div>
+    </nav>
+
     <section class="card">
-      <div class="card-titulo">Capa</div>
+      <div class="card-titulo">CAPA - DADOS INICIAIS</div>
       <div class="card-corpo">
         <div class="badges">
-          <span class="badge badge-azul">Base inicial do sistema</span>
-          <span class="badge badge-verde">Layout nas cores da Bracell</span>
+          <span class="badge badge-azul">Triagem da política</span>
+          <span class="badge badge-verde">Workflow com governança</span>
+          <span class="badge badge-alerta">Valor máximo permitido: R$ 200,00</span>
         </div>
 
         <div class="grid grid-4">
@@ -38,7 +112,8 @@
           <div class="campo">
             <label for="tipoDocumento">Tipo de Documento</label>
             <select id="tipoDocumento">
-              <option value="">Carregando...</option>
+              <option value="">Selecione</option>
+              <option value="ZREG">Requisição p/ regularização (ZREG)</option>
             </select>
           </div>
 
@@ -49,166 +124,100 @@
 
           <div class="campo">
             <label for="condicaoPagamento">Condição de Pagamento</label>
-            <select id="condicaoPagamento">
-              <option value="">Carregando...</option>
-            </select>
+            <select id="condicaoPagamento"><option value="">Carregando...</option></select>
+          </div>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="campo">
+            <label for="numeroNf">Número da Nota Fiscal</label>
+            <input id="numeroNf" type="text" placeholder="Informe o número da NF">
+          </div>
+          <div class="campo">
+            <label for="serieNf">Série da NF</label>
+            <input id="serieNf" type="text" placeholder="Informe a série">
+          </div>
+          <div class="campo">
+            <label for="dataNf">Data da NF</label>
+            <input id="dataNf" type="date">
+          </div>
+          <div class="campo">
+            <label for="valorNf">Valor Total da NF</label>
+            <input id="valorNf" type="number" min="0" max="200" step="0.01" placeholder="Máximo 200,00">
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="campo">
+            <label for="anexoNf">Anexar Nota Fiscal</label>
+            <input id="anexoNf" type="file" accept=".pdf,.jpg,.jpeg,.png,.xml">
+            <small class="dica">Obrigatório para continuar.</small>
+          </div>
+          <div class="campo">
+            <label for="observacao">Justificativa</label>
+            <textarea id="observacao" placeholder="Explique o motivo da regularização com detalhes"></textarea>
           </div>
         </div>
 
         <div class="grid grid-4">
           <div class="campo">
             <label for="centro">Centro</label>
-            <select id="centro">
-              <option value="">Carregando...</option>
-            </select>
+            <select id="centro"><option value="">Carregando...</option></select>
           </div>
-
           <div class="campo">
             <label for="centroCusto">Centro de Custo</label>
-            <select id="centroCusto">
-              <option value="">Carregando...</option>
-            </select>
+            <select id="centroCusto"><option value="">Carregando...</option></select>
           </div>
-
           <div class="campo">
             <label for="fornecedor">Fornecedor</label>
-            <select id="fornecedor">
-              <option value="">Carregando...</option>
-            </select>
+            <select id="fornecedor"><option value="">Carregando...</option></select>
           </div>
-
           <div class="campo">
             <label for="usuario">Usuário</label>
-            <select id="usuario">
-              <option value="">Carregando...</option>
-            </select>
+            <select id="usuario"><option value="">Carregando...</option></select>
           </div>
         </div>
 
         <div class="grid grid-2">
           <div class="campo">
             <label for="utilizacao">Utilização</label>
-            <select id="utilizacao">
-              <option value="">Carregando...</option>
-            </select>
+            <select id="utilizacao"><option value="">Carregando...</option></select>
           </div>
-
           <div class="campo">
-            <label for="observacao">Observação</label>
-            <textarea id="observacao" placeholder="Digite observações importantes"></textarea>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="blocoMaterial" class="card oculto">
-      <div class="card-titulo">Dados de Material</div>
-      <div class="card-corpo">
-        <div class="grid grid-4">
-          <div class="campo">
-            <label for="material">Material</label>
-            <select id="material">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label for="deposito">Depósito</label>
-            <select id="deposito">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label for="grupoCompras">Grupo de Compras</label>
-            <select id="grupoCompras">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label for="frete">Frete</label>
-            <select id="frete">
-              <option value="">Carregando...</option>
-            </select>
+            <label for="comunicadoPolitica">Comunicado ao usuário</label>
+            <textarea id="comunicadoPolitica" class="leitura" readonly></textarea>
           </div>
         </div>
 
-        <div class="grid grid-2">
-          <div class="campo">
-            <label for="quantidade">Quantidade</label>
-            <input id="quantidade" type="number" min="0" step="0.01" placeholder="Informe a quantidade">
-          </div>
-
-          <div class="campo">
-            <label for="valorMaterial">Valor do Material</label>
-            <input id="valorMaterial" type="number" min="0" step="0.01" placeholder="Informe o valor">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="blocoServico" class="card oculto">
-      <div class="card-titulo">Dados de Serviço</div>
-      <div class="card-corpo">
         <div class="grid grid-3">
-          <div class="campo">
-            <label for="destinacaoServico">Destinação do Serviço</label>
-            <select id="destinacaoServico">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label for="classificacaoContabil">Classificação Contábil</label>
-            <select id="classificacaoContabil">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
-
-          <div class="campo">
-            <label for="tipoDistribuicao">Tipo de Distribuição Contábil</label>
-            <select id="tipoDistribuicao">
-              <option value="">Carregando...</option>
-            </select>
-          </div>
+          <div class="campo"><label for="coordenador">Coordenador</label><input id="coordenador" class="leitura" type="text" readonly></div>
+          <div class="campo"><label for="controladoria">Controladoria</label><input id="controladoria" class="leitura" type="text" readonly></div>
+          <div class="campo"><label for="diretor">Diretor / Head</label><input id="diretor" class="leitura" type="text" readonly></div>
         </div>
 
-        <div class="grid grid-2">
-          <div class="campo">
-            <label for="descricaoServico">Descrição do Serviço</label>
-            <input id="descricaoServico" type="text" placeholder="Descreva o serviço">
-          </div>
-
-          <div class="campo">
-            <label for="valorServico">Valor do Serviço</label>
-            <input id="valorServico" type="number" min="0" step="0.01" placeholder="Informe o valor">
-          </div>
+        <div class="grid grid-3">
+          <div class="campo"><label for="emailCoordenador">E-mail Coordenador</label><input id="emailCoordenador" class="leitura" type="text" readonly></div>
+          <div class="campo"><label for="emailControladoria">E-mail Controladoria</label><input id="emailControladoria" class="leitura" type="text" readonly></div>
+          <div class="campo"><label for="emailDiretor">E-mail Diretor / Head</label><input id="emailDiretor" class="leitura" type="text" readonly></div>
         </div>
-      </div>
-    </section>
 
-    <section class="card">
-      <div class="card-titulo">Validação e Ações</div>
-      <div class="card-corpo">
+        <div class="grid grid-4">
+          <div class="campo"><label for="statusWorkflow">Status do Workflow</label><input id="statusWorkflow" class="leitura" type="text" readonly></div>
+          <div class="campo"><label for="etapaAtual">Etapa Atual</label><input id="etapaAtual" class="leitura" type="text" readonly></div>
+          <div class="campo"><label for="proximoAprovador">Próximo Aprovador</label><input id="proximoAprovador" class="leitura" type="text" readonly></div>
+          <div class="campo"><label for="tipoGovernanca">Tipo de Governança</label><input id="tipoGovernanca" class="leitura" type="text" readonly></div>
+        </div>
+
         <div class="botoes">
-          <button id="btnValidar" class="btn btn-primario" type="button">Validar</button>
-          <button id="btnSalvar" class="btn btn-secundario" type="button">Salvar no navegador</button>
-          <button id="btnExportar" class="btn btn-neutro" type="button">Exportar JSON</button>
+          <button id="btnValidarCapa" class="btn btn-primario" type="button">Validar Capa</button>
+          <button id="btnProximaEtapa" class="btn btn-secundario" type="button">Ir para próxima etapa</button>
           <button id="btnLimpar" class="btn btn-neutro" type="button">Limpar</button>
         </div>
 
-        <div style="height: 16px;"></div>
-
-        <div id="painelResultado" class="painel-resultado">
-          Preencha os campos e clique em Validar.
-        </div>
+        <div class="espacador"></div>
+        <div id="painelResultado" class="painel-resultado">Aguarde a validação inicial da política e depois preencha os dados da capa.</div>
       </div>
     </section>
-
-    <div class="rodape">
-      Sistema inicial em GitHub Pages • Base pronta para evoluir com regras e integração futura
-    </div>
   </main>
 
   <script src="./js/app.js"></script>

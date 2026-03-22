@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluxo ZREG Interativo</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="flow-page">
+  <div class="container">
+    <section class="card">
+      <div class="card-titulo">Fluxo de Atendimento - ZREG</div>
+      <div class="card-corpo">
+        <div class="flow-wrapper">
+          <div class="flow-stage" id="flowStage">
+            <div class="flow-label-vertical">FLUXO DE ATENDIMENTO - ZREG</div>
+            <div class="lane"><div class="lane-title" style="top: 36px;">USUÁRIO</div></div>
+            <div class="lane"><div class="lane-title" style="top: 190px;">BRASERVICE</div></div>
+            <div class="lane"><div class="lane-title" style="top: 390px;">TRIBUTÁRIO / IVA BRASERVICE</div></div>
+            <div class="lane"><div class="lane-title" style="top: 640px;">SAP</div></div>
+            <div class="circle-start" style="left:84px; top:62px;"></div>
+            <div style="position:absolute; left:78px; top:92px; font-size:14px;">Início</div>
+
+            <div class="node" data-title="1. Identifica a necessidade" data-desc="Usuário identifica a necessidade de solicitação de ZREG para valor menor ou igual a R$ 1.500. Esta etapa inicia o processo." style="left:145px; top:40px;">1. Identifica a necessidade de solicitação de ZREG valor menor ou igual a R$ 1.500</div>
+            <div class="node" data-title="2. Realiza abertura do chamado" data-desc="Usuário realiza a abertura do chamado via Braservice para iniciar a tratativa." style="left:286px; top:40px;">2. Realiza abertura de chamado via Braservice</div>
+            <div class="flow-small-note" style="left:400px; top:30px;">Preencher o formulário padrão que será um espelho da NF e as infos da RC</div>
+            <div class="node" data-title="3. Registrar chamado" data-desc="Braservice registra o chamado de solicitação de ZREG." style="left:274px; top:185px;">3. Registrar o chamado de solicitação de ZREG</div>
+            <div class="node" data-title="4. Anexar NF" data-desc="Braservice anexa a NF ao chamado e insere as informações fiscais para análise." style="left:415px; top:185px;">4. Anexar a NF no chamado e inserir as informações fiscais</div>
+            <div class="node" data-title="5. Validar IVA" data-desc="Time tributário/IVA recebe o chamado e valida as condições fiscais." style="left:415px; top:315px;">5. Receber o chamado e validar o IVA</div>
+            <div class="decision" data-title="IVA correto?" data-desc="Decisão tributária: se o IVA estiver correto, o fluxo segue para SAP. Se não, retorna para ajuste." style="left:472px; top:412px;"></div>
+            <div style="position:absolute; left:452px; top:445px; font-size:12px;">IVA correto?</div>
+            <div style="position:absolute; left:510px; top:428px; font-size:12px;">Não</div>
+            <div style="position:absolute; left:482px; top:472px; font-size:12px;">Sim</div>
+            <div class="node" data-title="6. Retornar ao usuário" data-desc="Se houver divergência, Braservice retorna ao usuário para que os ajustes sejam realizados." style="left:522px; top:365px;">6. Retornar ao usuário via chamado Braservice para que os ajustes sejam realizados</div>
+            <div class="flow-small-note" style="left:650px; top:390px;">Informar ao usuário do IVA correto para ajustes</div>
+            <div class="node" data-title="7. Gerar requisição" data-desc="No SAP, é gerada a requisição de compra via RPA." style="left:405px; top:660px;">7. Gerar a requisição de compra via RPA no SAP</div>
+            <div class="node" data-title="8. Aprovar RC" data-desc="A RC segue para aprovação conforme o fluxo padrão da área." style="left:565px; top:660px;">8. Aprovar RC</div>
+            <div class="node-gray" style="left:582px; top:518px;">Gerente da área</div>

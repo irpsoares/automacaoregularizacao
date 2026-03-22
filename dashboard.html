@@ -5,164 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Executivo - ZREG</title>
   <link rel="stylesheet" href="./css/styles.css">
-  <style>
-    .dash-hero {
-      background: linear-gradient(135deg, #17458a 0%, #1f5db8 55%, #9cc857 100%);
-      color: white;
-      border-radius: 22px;
-      padding: 28px;
-      box-shadow: var(--sombra);
-      margin-bottom: 22px;
-    }
-    .dash-hero h1 { margin: 0 0 8px; font-size: 34px; }
-    .dash-hero p { margin: 0; max-width: 900px; line-height: 1.6; opacity: 0.98; }
-
-    .dash-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-      margin: 22px 0;
-    }
-
-    .dash-card {
-      background: white;
-      border: 1px solid var(--borda);
-      border-radius: 18px;
-      padding: 18px;
-      box-shadow: var(--sombra);
-    }
-
-    .dash-card h3 {
-      margin: 0 0 8px;
-      color: var(--azul-escuro);
-      font-size: 18px;
-    }
-
-    .dash-card p {
-      margin: 0;
-      color: var(--texto-suave);
-      line-height: 1.5;
-      min-height: 72px;
-    }
-
-    .dash-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-    }
-
-    .dash-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      border-radius: 12px;
-      padding: 12px 16px;
-      font-weight: 700;
-      border: 1px solid transparent;
-      transition: .2s;
-    }
-
-    .dash-btn:hover { transform: translateY(-1px); }
-
-    .dash-btn-primary {
-      background: var(--azul-principal);
-      color: white;
-    }
-
-    .dash-btn-secondary {
-      background: var(--verde-principal);
-      color: #17310b;
-    }
-
-    .dash-btn-neutral {
-      background: #eef3f8;
-      color: var(--texto);
-      border-color: #d8e2ec;
-    }
-
-    .dash-section { margin-top: 26px; }
-    .dash-section-title {
-      margin: 0 0 14px;
-      color: var(--azul-escuro);
-      font-size: 22px;
-    }
-
-    .fluxo-frame-wrap {
-      background: white;
-      border: 1px solid var(--borda);
-      border-radius: 20px;
-      box-shadow: var(--sombra);
-      overflow: hidden;
-    }
-
-    .fluxo-toolbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--borda);
-      background: linear-gradient(90deg, #f7fbff, #eef7ea);
-    }
-
-    .fluxo-toolbar h2 {
-      margin: 0;
-      font-size: 18px;
-      color: var(--azul-escuro);
-    }
-
-    .fluxo-frame {
-      width: 100%;
-      height: 950px;
-      border: none;
-      display: block;
-      background: #f7f7f7;
-    }
-
-    .dash-kpi {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-
-    .kpi-box {
-      background: white;
-      border: 1px solid var(--borda);
-      border-radius: 18px;
-      box-shadow: var(--sombra);
-      padding: 18px;
-    }
-
-    .kpi-box small {
-      display: block;
-      color: var(--texto-suave);
-      margin-bottom: 8px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-    }
-
-    .kpi-box strong {
-      display: block;
-      font-size: 28px;
-      color: var(--azul-escuro);
-      margin-bottom: 6px;
-    }
-
-    .kpi-box span {
-      color: var(--texto-suave);
-      line-height: 1.4;
-      display: block;
-    }
-
-    @media (max-width: 1100px) {
-      .dash-grid, .dash-kpi { grid-template-columns: 1fr; }
-      .fluxo-frame { height: 720px; }
-    }
-  </style>
 </head>
 <body>
   <header class="topo">
@@ -176,7 +18,7 @@
   </header>
 
   <main class="container">
-    <section class="dash-hero">
+    <section class="hero">
       <h1>Visão Integrada do Processo</h1>
       <p>
         Este painel reúne a jornada completa da regularização ZREG: triagem da política,
@@ -185,7 +27,7 @@
       </p>
     </section>
 
-    <section class="dash-kpi">
+    <section class="kpi-grid">
       <div class="kpi-box">
         <small>Etapa 1</small>
         <strong>Política + Capa</strong>
@@ -211,48 +53,39 @@
     <section class="dash-grid">
       <div class="dash-card">
         <h3>Nova Solicitação</h3>
-        <p>Inicia o processo com política, capa, nota fiscal, validações e definição do tipo.</p>
-        <div class="dash-actions">
-          <a class="dash-btn dash-btn-primary" href="./index.html">Abrir Sistema</a>
-        </div>
+        <p>Inicia o processo no sistema com a política, capa, NF, validações e definição do tipo.</p>
+        <div class="botoes"><a class="btn btn-primario" href="./index.html">Abrir Sistema</a></div>
       </div>
-
       <div class="dash-card">
         <h3>Detalhamento</h3>
         <p>Permite navegar diretamente para as etapas específicas de material ou serviço.</p>
-        <div class="dash-actions">
-          <a class="dash-btn dash-btn-secondary" href="./material.html">Material</a>
-          <a class="dash-btn dash-btn-secondary" href="./servico.html">Serviço</a>
+        <div class="botoes">
+          <a class="btn btn-secundario" href="./material.html">Material</a>
+          <a class="btn btn-secundario" href="./servico.html">Serviço</a>
         </div>
       </div>
-
       <div class="dash-card">
         <h3>Workflow</h3>
         <p>Mostra a governança separada com validação tributária e fluxo de aprovação.</p>
-        <div class="dash-actions">
-          <a class="dash-btn dash-btn-primary" href="./workflow.html">Abrir Workflow</a>
-        </div>
+        <div class="botoes"><a class="btn btn-primario" href="./workflow.html">Abrir Workflow</a></div>
       </div>
-
       <div class="dash-card">
         <h3>Painel Final</h3>
         <p>Apresenta o resumo executivo da solicitação, a trilha de aprovação e a decisão final.</p>
-        <div class="dash-actions">
-          <a class="dash-btn dash-btn-neutral" href="./aprovacao.html">Abrir Aprovação Final</a>
-        </div>
+        <div class="botoes"><a class="btn btn-neutro" href="./aprovacao.html">Abrir Aprovação Final</a></div>
       </div>
     </section>
 
-    <section class="dash-section">
-      <h2 class="dash-section-title">Fluxo Operacional ZREG</h2>
-      <div class="fluxo-frame-wrap">
-        <div class="fluxo-toolbar">
-          <h2>Fluxo interativo da regularização</h2>
-          <div class="dash-actions">
-            <a class="dash-btn dash-btn-neutral" href="./fluxo_zreg.html" target="_blank">Abrir em tela cheia</a>
+    <section class="card">
+      <div class="card-titulo">Fluxo Operacional ZREG</div>
+      <div class="card-corpo">
+        <div class="iframe-wrap">
+          <div class="iframe-toolbar">
+            <h2>Fluxo interativo da regularização</h2>
+            <div class="botoes"><a class="btn btn-neutro" href="./fluxo_zreg.html" target="_blank">Abrir em tela cheia</a></div>
           </div>
+          <iframe class="iframe-box" src="./fluxo_zreg.html" title="Fluxo ZREG Interativo"></iframe>
         </div>
-        <iframe class="fluxo-frame" src="./fluxo_zreg.html" title="Fluxo ZREG Interativo"></iframe>
       </div>
     </section>
   </main>

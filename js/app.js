@@ -181,46 +181,39 @@ function atualizarWorkflowPorCentroCusto() {
   campos.tipoGovernanca.value = 'Coordenação -> Controladoria -> Diretor';
 }
 
-function politicaResumo() {
-  const item = bases.politica[0];
-  if (!item) return '';
-  const texto = Object.values(item).find(v => typeof v === 'string' && v.trim());
-  return valorSeguro(texto);
-}
-
 function validarPolitica() {
   const respostas = obterRespostasPolitica();
   const mensagens = [];
 
   if (!respostas.emergencial || !respostas.notaFiscal || !respostas.impedimento || !respostas.justificativa) {
     mensagens.push('Responda todas as perguntas da política.');
-    return { ok: false, mensagens, governancaEspecial: false, diretoHead: false };
+    return { ok: false, mensagens };
   }
 
   if (respostas.notaFiscal !== 'sim') {
     mensagens.push('Sem nota fiscal não é permitido continuar.');
-    return { ok: false, mensagens, governancaEspecial: true, diretoHead: true };
+    return { ok: false, mensagens };
   }
 
   if (respostas.justificativa !== 'sim') {
     mensagens.push('A justificativa detalhada é obrigatória para continuar.');
-    return { ok: false, mensagens, governancaEspecial: true, diretoHead: true };
+    return { ok: false, mensagens };
   }
 
   if (respostas.emergencial === 'nao') {
-    mensagens.push('Solicitação sem emergência: a aprovação deve seguir diretamente para o Head/Diretor.');
+    mensagens.push('Solicitação sem emergência: a aprovação seguirá diretamente para Head/Diretor.');
     mensagens.push('O usuário deve ser comunicado explicitamente com referência à política de compras.');
-    return { ok: true, mensagens, governancaEspecial: true, diretoHead: true };
+    return { ok: true, mensagens };
   }
 
   if (respostas.impedimento === 'nao') {
-    mensagens.push('Sem impedimento do fluxo normal, a solicitação entra em governança reforçada.');
-    return { ok: true, mensagens, governancaEspecial: true, diretoHead: false };
+    mensagens.push('Sem impedimento do fluxo normal: caso seguirá em governança reforçada.');
+    return { ok: true, mensagens };
   }
 
   mensagens.push('Triagem da política validada.');
   mensagens.push('Você pode prosseguir para o preenchimento da capa.');
-  return { ok: true, mensagens, governancaEspecial: false, diretoHead: false };
+  return { ok: true, mensagens };
 }
 
 function existeNaBase(base, chave, valor) {
@@ -229,6 +222,7 @@ function existeNaBase(base, chave, valor) {
 
 function validarArquivoNf() {
   const arquivos = campos.anexoNf.files;
+
   if (!arquivos || !arquivos.length) {
     return 'É obrigatório anexar a nota fiscal.';
   }
@@ -380,7 +374,6 @@ function validarCapa(dados) {
     mensagens.push('Informe a justificativa.');
   } else {
     if (dados.observacao.length < 20) mensagens.push('A justificativa deve ter pelo menos 20 caracteres.');
-    if (!/[a-zA-ZÀ-ÿ]/.test(dados.observacao)) mensagens.push('A justificativa parece inválida.');
   }
 
   if (!dados.coordenador || !dados.controladoria || !dados.diretor) {
@@ -394,35 +387,31 @@ function salvarCapaLocalmente() {
   localStorage.setItem('regularizacao_capa', JSON.stringify(coletarDadosCapa()));
 }
 
-function irParaProximaEtapa() {
-  const dados = coletarDadosCapa();
-  const erros = validarCapa(dados);
-
-  if (erros.length) {
-    painelResultado.textContent = erros.join('\n');
-    return;
-  }
-
-  salvarCapaLocalmente();
-
-  if (dados.tipoRegularizacao === 'material') {
-    window.location.href = './material.html';
-    return;
-  }
-
-  if (dados.tipoRegularizacao === 'servico') {
-    window.location.href = './servico.html';
-  }
-}
-
 function limparFormulario() {
-  document.querySelectorAll('input[name="tipoRegularizacao"]').forEach(r => (r.checked = false));
-  document.querySelectorAll('select').forEach(s => (s.selectedIndex = 0));
-  document.querySelectorAll('input[type="text"], input[type="number"], input[type="date"], textarea, input[type="file"]').forEach(c => {
+  document.querySelectorAll('input[name="tipoRegularizacao"]').forEach(r => {
+    r.checked = false;
+  });
+
+  document.querySelectorAll('select').forEach(s => {
+    s.selectedIndex = 0;
+  });
+
+  document.querySelectorAll('input[type="text"], input[type="number"], input[type="date"], textarea').forEach(c => {
     if (c.id !== 'dataHora') c.value = '';
   });
 
+  if (campos.anexoNf) {
+    campos.anexoNf.value = '';
+  }
+
   limparWorkflow();
+  campos.comunicadoPolitica.value = '';
+  campos.dataHora.value = formatarDataHora();
+
+  localStorage.removeItem('regularizacao_capa');
+  localStorage.removeItem('regularizacao_material');
+  localStorage.removeItem('regularizacao_servico');
+
   painelResultado.textContent = 'Formulário limpo.';
 }
 
@@ -451,26 +440,47 @@ function registrarEventos() {
     const dados = coletarDadosCapa();
     const erros = validarCapa(dados);
 
-    const mensagens = [];
     if (erros.length) {
-      mensagens.push(...erros);
-    } else {
-      mensagens.push('Capa validada com sucesso.');
-      mensagens.push(`Workflow: ${dados.tipoGovernanca}`);
-      mensagens.push(`Próximo aprovador: ${dados.proximoAprovador}`);
+      painelResultado.textContent = erros.join('\n');
+      return;
     }
 
-    const politicaTexto = politicaResumo();
-    if (politicaTexto) {
-      mensagens.push('');
-      mensagens.push(`Resumo da política: ${politicaTexto}`);
-    }
-
-    painelResultado.textContent = mensagens.join('\n');
+    painelResultado.textContent =
+      'Capa validada com sucesso.\n' +
+      `Workflow: ${dados.tipoGovernanca}\n` +
+      `Próximo aprovador: ${dados.proximoAprovador}`;
   });
 
-  document.getElementById('btnProximaEtapa').addEventListener('click', irParaProximaEtapa);
-  document.getElementById('btnLimpar').addEventListener('click', limparFormulario);
+  document.getElementById('btnProximaEtapa').addEventListener('click', () => {
+    montarComunicadoPolitica();
+    aplicarWorkflowGovernanca();
+
+    const dados = coletarDadosCapa();
+    const erros = validarCapa(dados);
+
+    if (erros.length) {
+      painelResultado.textContent = erros.join('\n');
+      return;
+    }
+
+    salvarCapaLocalmente();
+
+    if (dados.tipoRegularizacao === 'material') {
+      window.location.href = './material.html';
+      return;
+    }
+
+    if (dados.tipoRegularizacao === 'servico') {
+      window.location.href = './servico.html';
+    }
+  });
+
+  document.getElementById('btnLimpar').addEventListener('click', () => {
+    limparFormulario();
+    localStorage.removeItem('politica_validada');
+    modalPolitica.classList.add('aberto');
+    resultadoPolitica.textContent = 'Responda as perguntas para continuar.';
+  });
 }
 
 async function iniciar() {
